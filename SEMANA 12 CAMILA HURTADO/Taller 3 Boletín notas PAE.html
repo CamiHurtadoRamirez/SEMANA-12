@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETÍN NOTAS</title>
+    <!-- Link de sitio sweet alert mensajes más elegantes -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./IMG/WhatsApp Image 2024-04-19 at 10.13.27 AM.jpeg" alt="" width="150" height="150">
+        <h1>BOLETÍN DE NOTAS SEMESTRE 2024A</h1>
+        <h2>Materia PAE JAVA SCRIPT</h2>
+        <h3>NOTAS [1=DESEMPEÑO - 2=TALLERES EN CLASE - 3=CUESTIONARIO</h3>
+        <br><br>
+        <script>
+            let suma_nota,prom;
+            suma_nota=0; //promedio de notas
+            prom=0;
+            num=1; //contador de notas
+            //Entrada
+            let nombre_std=prompt("Nombre del estudiante")
+            //Ciclo while
+            while(num<=3) //Tope máximo de 3 notas
+            {
+                let nota_std=parseFloat(prompt("Ingrese nota del estudiante [1 a 5]"));
+                //Totalizador de notas
+                suma_nota+=nota_std; // suma_nota=suma_nota+nota_std
+                //Contador de notas
+                num++;
+            }
+            // Calcular definitiva
+            prom=suma_nota/3;
+            //Condicional nota final
+            if(prom>=3.0){
+                swal("APRECIADO ESTUDIANTE","FELICITACIONES APROBASTE MATERIA PE JAVASCRIPT","success")
+                document.write("Puedes pasar al siguiente nivel de programación PHP");
+            }else{
+                swal("APRECIADO ESTUDIANTE","REPROBASTE MATERIA PE JAVASCRIPT","error")
+                document.write("DEBES HACER CURSO REMEDIAL DE RECUPERACIÓN");
+            }
+            //SALIDA NOTA FINAL
+            document.write("<br>"+"<br");
+            document.write("***************************************************************"+"<br>");
+            document.write("ESTUDIANTE..."+nombre_std+"<br>");
+            document.write("NOTA FINAL DE MATERIA PE JAVASCRIPT ES..."+prom.toFixed(2)+"<br>");
+            document.write("***************************************************************"+"<br>");
+        </script>
+    </center>
+</body>
+</html>

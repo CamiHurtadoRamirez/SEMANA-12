@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDA SESIÓN CONTRASEÑA</title>
+    <!-- link de sitio sweet alert mensajes más elegantes -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Validar ingreso de sesión usuario</h1>
+        <h2>Sistema de información banco NU Bank</h2>
+        <h3>Tiene 3 intentos</h3>
+        <br><br>
+        <script>
+            var sw=0; //Var control ingreso usuario - apagada
+            var clave=12345; //Contraseña de ingreso asignada
+            // Ciclo for
+            for(f=1;f<=3;f++) // inicia en 1 y su tompe máximo son 3 intentos
+            {
+                var pasw2=parseInt(prompt("PASSWORD"));
+                //Condicional
+                if(pasw2==clave)
+                {
+                    swal("Apreciado usuario","Acceso otorgado","success");
+                    sw=1; //Cambia a estado encendido - control ingreso
+                    break;
+                }
+            }
+            //Salida final
+            if(sw=0)
+            {
+                swal("Apreciado usuario","Acceso denegado... Esperar 1 minuto","error");
+            }else{
+                swal("Apreciado usuario","Bienvenido al sistema de información del banco NU bank","success")
+            }
+        </script>
+    </center>
+</body>
+</html>

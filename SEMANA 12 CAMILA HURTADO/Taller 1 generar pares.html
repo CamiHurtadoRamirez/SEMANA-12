@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números pares</title>
+</head>
+<body>
+    <center>
+        <h1>GENERACIÓN DE NÚMEROS PARES</h1>
+        <h2>A partir de un rango numérico ingresado por usuario</h2>
+        <br><br>
+        <script>
+            let num=0; //contador números pares
+            let inicio=parseInt(prompt("INGRESE NÚMERO INICIAL..."));
+            let final=parseInt(prompt("INGRESE NÚMERO FINAL..."));
+            //CICLO FOR
+            for(f=inicio;f<=final;f++)
+            {
+                if(f%2==0)
+                {
+                    document.write("Número par..."+f+"<br>");
+                    num++; //contador números pares 
+                }
+            }
+            //Salida final de números pares
+            document.write("*****************************************************************"+"<br>");
+            document.write("<br>");
+            document.write("Cantidad de números pares generados..."+num+"<br>");
+            document.write("*****************************************************************"+"<br>");
+        </script>
+    </center>
+</body>
+</html>
